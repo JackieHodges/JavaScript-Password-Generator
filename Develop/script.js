@@ -4,6 +4,9 @@ var lowerCaseString = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
 var lowerCaseArray = lowerCaseString.split(" ");
 var upperCaseString = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z";
 var upperCaseArray = upperCaseString.split(" ");
+var specialCaseString = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+var specialCaseArray = specialCaseString.split("");
+var yourPassword = [];
 
 
 // Write password to the #password input
@@ -29,8 +32,12 @@ if (passwordLength < 8){
   console.log(typeof passwordLength)
 //   changes string entry to number to allow for creation of password array
   var passwordArrayLength = Number(passwordLength);
-  console.log(typeof passwordArrayLength)
+
+
+
 //   create an array with length specified
+
+// prompts user if wanting to use lower case letters
 
 }
 
