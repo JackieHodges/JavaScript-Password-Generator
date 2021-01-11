@@ -95,4 +95,21 @@ if (passwordLength < 8){
         console.log("number of upper characters: " + numberOfUpper);
         console.log(yourPassword);
     }
+
+    // if users choose to have upper and special but no lower 
+    if(includeLower === false && includeUpper === true && includeSpecial === true){
+        var numberOfUpper = random;
+        console.log("number of upper case: " + numberOfUpper);
+        for (var j = 0; j < numberOfUpper; j++){
+            yourPassword.push(upperCaseArray[j]);
+        }
+        var numberOfSpecial = passwordArrayLength - numberOfUpper;
+        console.log("number of special case: " + numberOfSpecial);
+        for (var k = 0; k < numberOfSpecial; k++){
+            yourPassword.push(specialCaseArray[k]);
+        }
+        var numberOfLower = 0;
+        console.log("number of lower characters: " + numberOfLower);
+        console.log(yourPassword);
+    }
 }
