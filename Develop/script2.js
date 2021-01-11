@@ -7,7 +7,7 @@ var upperCaseArray = upperCaseString.split(" ");
 var specialCaseString = "<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=";
 var specialCaseArray = specialCaseString.split("");
 var yourPassword = [];
-console.log(specialCaseArray.length);
+console.log(lowerCaseArray);
 
 
 // Write password to the #password input
@@ -173,9 +173,13 @@ function generatePassword (passwordLength, includeLower, includeUpper, includeSp
             console.log(yourPassword);
         }
     
-    // randomize the password array 
-    shuffle(yourPassword);
-    console.log(yourPassword);
-    }
+        // randomize the password array 
+        shuffle(yourPassword);
+        console.log(yourPassword);
+
+        // join the password array into a single string
+        var password = yourPassword.join("");
+        console.log(password);
+        }
 }
 writePassword(); 
