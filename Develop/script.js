@@ -32,12 +32,24 @@ if (passwordLength < 8){
   console.log(typeof passwordLength)
 //   changes string entry to number to allow for creation of password array
   var passwordArrayLength = Number(passwordLength);
-
-
-
-//   create an array with length specified
+//   create random numbers from password array length
+  const random = Math.floor(Math.random()*passwordArrayLength);
+  console.log("random: " + random);
 
 // prompts user if wanting to use lower case letters
+    var includeLower = confirm("Would you like to include lower case letters?");
+        if(includeLower === true){
+            var numberOfLower = random;
+            console.log("number of lower case: " + numberOfLower);
+            for (var i = 0; i < numberOfLower; i++){
+                yourPassword.push(lowerCaseArray[i]);
+            }
+            console.log(yourPassword);
+        } else{
+            var numberOfLower = 0;
+            console.log("number of lower case: " + numberOfLower);
+            console.log(yourPassword);
+        }
 
 }
 
