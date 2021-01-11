@@ -7,8 +7,6 @@ var upperCaseArray = upperCaseString.split(" ");
 var specialCaseString = "<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=";
 var specialCaseArray = specialCaseString.split("");
 var yourPassword = [];
-console.log(lowerCaseArray);
-
 
 // Write password to the #password input
 function writePassword() {
