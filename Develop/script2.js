@@ -1,12 +1,13 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var lowerCaseString = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
+var lowerCaseString = "a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z";
 var lowerCaseArray = lowerCaseString.split(" ");
-var upperCaseString = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z";
+var upperCaseString = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z";
 var upperCaseArray = upperCaseString.split(" ");
-var specialCaseString = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
+var specialCaseString = "<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=";
 var specialCaseArray = specialCaseString.split("");
 var yourPassword = [];
+console.log(specialCaseArray.length);
 
 
 // Write password to the #password input
@@ -42,19 +43,12 @@ if (passwordLength < 8){
     var includeSpecial = confirm("Would you like to include special characters?");
 
     if(includeLower === true && includeUpper === true && includeSpecial === true ){
-        if(random < 26){
             var numberOfLower = random;
             console.log("number of lower case: " + numberOfLower);
             for (var i = 0; i < numberOfLower; i++){
                 yourPassword.push(lowerCaseArray[i]);
             }
-        } else{
-            var numberOfLower = 26;
-            console.log("number of lower case: " + numberOfLower);
-            for (var i = 0; i < numberOfLower; i++){
-                yourPassword.push(lowerCaseArray[i]);
-            }
-            const numberOfUpper = Math.floor(Math.random()*(passwordArrayLength-numberOfLower));
+            var numberOfUpper = Math.floor(Math.random()*(passwordArrayLength-numberOfLower));
             console.log("number of upper case: " + numberOfUpper);
             for (var j = 0; j < numberOfUpper; j++){
                 yourPassword.push(upperCaseArray[j]);
@@ -65,9 +59,5 @@ if (passwordLength < 8){
                 yourPassword.push(specialCaseArray[k]);
             }
             console.log(yourPassword);
-        }
     }
-
-
-
 }
