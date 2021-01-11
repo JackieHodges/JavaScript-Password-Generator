@@ -1,8 +1,8 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var lowerCaseString = "a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z";
+var lowerCaseString = "a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z a b c d e f g h i j k l m n o p q r s t u v w x y z";
 var lowerCaseArray = lowerCaseString.split(" ");
-var upperCaseString = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z";
+var upperCaseString = "A B C D E F G H I J K L M N O P Q R S T U V W X Y Z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z A B C D E F G H I J K L M N O P Q R S T U V W X Y Z";
 var upperCaseArray = upperCaseString.split(" ");
 var specialCaseString = "<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=<>@!#$%^&*()_+[]{}?:;|'\"\\,./~`-=";
 var specialCaseArray = specialCaseString.split("");
@@ -108,6 +108,20 @@ if (passwordLength < 8){
         for (var k = 0; k < numberOfSpecial; k++){
             yourPassword.push(specialCaseArray[k]);
         }
+        var numberOfLower = 0;
+        console.log("number of lower characters: " + numberOfLower);
+        console.log(yourPassword);
+    }
+
+    // if users choose only lower 
+    if(includeLower === true && includeUpper === false && includeSpecial === false){
+        var numberOfUpper = 128;
+        console.log("number of upper case: " + numberOfUpper);
+        for (var j = 0; j < numberOfUpper; j++){
+            yourPassword.push(upperCaseArray[j]);
+        }
+        var numberOfSpecial = 0;
+        console.log("number of special case: " + numberOfSpecial);
         var numberOfLower = 0;
         console.log("number of lower characters: " + numberOfLower);
         console.log(yourPassword);
