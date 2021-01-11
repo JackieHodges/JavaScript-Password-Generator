@@ -42,22 +42,39 @@ if (passwordLength < 8){
     var includeUpper = confirm("Would you like to include upper case letters?");
     var includeSpecial = confirm("Would you like to include special characters?");
 
+    // if users chooses to have all 3 options
     if(includeLower === true && includeUpper === true && includeSpecial === true ){
-            var numberOfLower = random;
-            console.log("number of lower case: " + numberOfLower);
-            for (var i = 0; i < numberOfLower; i++){
-                yourPassword.push(lowerCaseArray[i]);
-            }
-            var numberOfUpper = Math.floor(Math.random()*(passwordArrayLength-numberOfLower));
-            console.log("number of upper case: " + numberOfUpper);
-            for (var j = 0; j < numberOfUpper; j++){
-                yourPassword.push(upperCaseArray[j]);
-            }
-            var numberOfSpecial = passwordArrayLength - numberOfLower - numberOfUpper;
-            console.log("number of special characters: " + numberOfSpecial);
-            for (var k = 0; k < numberOfSpecial; k++){
-                yourPassword.push(specialCaseArray[k]);
-            }
-            console.log(yourPassword);
+        var numberOfLower = random;
+        console.log("number of lower case: " + numberOfLower);
+        for (var i = 0; i < numberOfLower; i++){
+            yourPassword.push(lowerCaseArray[i]);
+        }
+        var numberOfUpper = Math.floor(Math.random()*(passwordArrayLength-numberOfLower));
+        console.log("number of upper case: " + numberOfUpper);
+        for (var j = 0; j < numberOfUpper; j++){
+            yourPassword.push(upperCaseArray[j]);
+        }
+        var numberOfSpecial = passwordArrayLength - numberOfLower - numberOfUpper;
+        console.log("number of special characters: " + numberOfSpecial);
+        for (var k = 0; k < numberOfSpecial; k++){
+            yourPassword.push(specialCaseArray[k]);
+         }
+        console.log(yourPassword);
+    }
+    // if users choose to have upper and lower but no special 
+    if(includeLower === true && includeUpper === true && includeSpecial === false){
+        var numberOfLower = random;
+        console.log("number of lower case: " + numberOfLower);
+        for (var i = 0; i < numberOfLower; i++){
+            yourPassword.push(lowerCaseArray[i]);
+        }
+        var numberOfUpper = passwordArrayLength - numberOfLower;
+        console.log("number of upper case: " + numberOfUpper);
+        for (var j = 0; j < numberOfUpper; j++){
+            yourPassword.push(upperCaseArray[j]);
+        }
+        var numberOfSpecial = 0;
+        console.log("number of special characters: " + numberOfSpecial);
+        console.log(yourPassword);
     }
 }
