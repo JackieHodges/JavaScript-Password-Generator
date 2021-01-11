@@ -26,3 +26,9 @@ Otherwise, the github page can be found here: [JavaScript Password Generator Web
 ## Usage
 
 Below are screenshots of the page:
+
+![screenshot 1](assets/images/screenshot1.png)
+
+
+
+![screenshot 2](assets/images/screenshot2.png)
