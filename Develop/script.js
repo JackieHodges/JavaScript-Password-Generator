@@ -26,7 +26,10 @@ if (passwordLength < 8){
   alert("Your password must be less than 128 characters. Try again.");
 } else {
   console.log("Password Length: " + passwordLength);
-
+  console.log(typeof passwordLength)
+//   changes string entry to number to allow for creation of password array
+  var passwordArrayLength = Number(passwordLength);
+  console.log(typeof passwordArrayLength)
 //   create an array with length specified
 
 }
