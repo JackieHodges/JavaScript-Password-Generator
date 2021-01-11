@@ -31,9 +31,6 @@ function shuffle(array) {
     return array;
   }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword); 
-
 function generatePassword (){
     // Prompt user about password length
     var passwordLength = prompt("How many characters do you want in your password?");
@@ -177,5 +174,7 @@ function generatePassword (){
         
 }
 
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword); 
 
 
