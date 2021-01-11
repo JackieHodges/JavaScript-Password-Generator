@@ -17,6 +17,7 @@ function writePassword() {
   passwordText.value = password;
 }
 
+// randomizes array
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;  
     // While there remain elements to shuffle...
@@ -35,7 +36,7 @@ function shuffle(array) {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword); 
 
-function generatePassword (passwordLength, includeLower, includeUpper, includeSpecial){
+function generatePassword (){
     // Prompt user about password length
     var passwordLength = prompt("How many characters do you want in your password?");
     if (passwordLength < 8){
@@ -173,7 +174,9 @@ function generatePassword (passwordLength, includeLower, includeUpper, includeSp
     console.log(yourPassword);
     // join the password array into a single string
     var password = yourPassword.join("");
-    console.log(password);    
+    console.log(password);
+    return password;
+        
 }
 
 
