@@ -50,6 +50,30 @@ if (passwordLength < 8){
             console.log("number of lower case: " + numberOfLower);
             console.log(yourPassword);
         }
+    
+    // prompts user if wanting to use upper case letters
+    var includeUpper = confirm("Would you like to include upper case letters?");
+    // option for if lower case was also included
+        if (includeUpper === true && includeLower === true) {
+            var numberOfUpper = passwordArrayLength - numberOfLower
+            console.log("number of upper case: " + numberOfUpper);
+            for (var j = 0; j < numberOfUpper; j++){
+                yourPassword.push(upperCaseArray[j]);
+            }
+            console.log(yourPassword);
+        } else if (includeUpper === true && includeLower === false){
+            var numberOfUpper = random;
+            console.log("number of upper case: " + numberOfUpper);
+            for (var j = 0; j < numberOfUpper; j++){
+                yourPassword.push(upperCaseArray[j]);
+            }
+            console.log(yourPassword);
+
+        } else{
+            var numberOfUpper = 0;
+            console.log("number of upper case: " + numberOfUpper);
+            console.log(yourPassword);
+        }
 
 }
 
